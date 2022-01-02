@@ -22,9 +22,9 @@ while running:
         if event.type == pygame.QUIT: 
             # 창을 끄는 버튼을 누르면 해당 이벤트가 발생
             running = False 
-                
-    screen.fill((0, 0, 255))
 
+    # fill, 과 blit의 순서 바뀌면 fill만 보여짐. 당연한 듯        
+    screen.fill((0, 0, 255))
     screen.blit(background, (20, 0))
     ## while 문에서 계속 프레임을 그려주어야함 
     pygame.display.update()
