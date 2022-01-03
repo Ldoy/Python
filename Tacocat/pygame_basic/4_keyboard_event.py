@@ -1,7 +1,5 @@
 ##make pygame basic(뼈대)
 import pygame
-from pygame import image
-from pygame.constants import QUIT
 
 # 초기화 
 pygame.init()
@@ -30,6 +28,9 @@ charater_height = charater_size[1]
 character_x_pos = (screen_width / 2) - (character_width / 2)
 character_y_pos = screen_height - charater_height
 
+## 캐릭터가 이동할 좌표
+to_x = 0
+to_y = 0
 
 # 동작검사하는 이벤트 루프가 실행되어야 창이 꺼지지 않음 
 flag = True
@@ -37,8 +38,36 @@ while flag:
      #사용자의 이벤트를 체크하는 것
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
+             # 창을 끄는 버튼을 누르면 해당 이벤트가 발생
             flag = False
-            # 창을 끄는 버튼을 누르면 해당 이벤트가 발생
+        
+        if event.type == pygame.KEYDOWN:
+            # 해당 경우에 캐릭터의 좌표를 바꿔주기 
+            if event.key == pygame.K_LEFT:
+                to_x -= 5
+            elif event.key == pygame.K_RIGHT:
+                to_x += 5
+            elif event.key == pygame.K_UP:
+                to_y -=5      
+            elif event.key == pygame.K_DOWN: 
+                to_y += 5
+        # 키를 떼면 멈춰야하기 때문에 추가할 값 자체를 0으로 만듬 
+        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
+                to_x = 0
+            elif event.key == pygame.K_UP or event.key == pygame.K_DOWN:
+                to_y = 0
+    character_x_pos += to_x
+    character_y_pos += to_y
+
+    if character_x_pos < 0:
+        character_x_pos = 0
+    elif character_x_pos > screen_width - character_width:
+        character_x_pos = screen_width - character_width
+    if character_y_pos < 0:
+        character_y_pos = 0
+    elif character_y_pos > screen_height -  charater_height:
+        character_y_pos = screen_height - charater_height
 
     # fill, 과 blit의 순서 바뀌면 fill만 보여짐. 당연한 듯      
     screen.blit(background, (0,0))
