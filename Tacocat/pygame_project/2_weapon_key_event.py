@@ -50,7 +50,7 @@ weapon_width = weapon_size[0]
 weapons = []
 
 # 8.1 무기속도 정의하기, 
-weapon_speed = 2
+weapon_speed = 10
 
 flag = True
 while flag:
