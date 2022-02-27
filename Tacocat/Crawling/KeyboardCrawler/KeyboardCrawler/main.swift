@@ -14,7 +14,7 @@ enum CrawerError: Error {
     case addressInvalid
 }
 
-class Crawer {
+class Crawler {
     
     // 1. url바꾸기
     private func makeURL(url address: String) throws -> URL {
