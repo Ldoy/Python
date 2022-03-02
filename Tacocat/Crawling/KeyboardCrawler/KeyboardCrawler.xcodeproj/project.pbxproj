@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A8260DB727CA59F5003CBF33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8260DB627CA59F5003CBF33 /* main.swift */; };
 		A8260DBF27CA5B47003CBF33 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = A8260DBE27CA5B47003CBF33 /* SwiftSoup */; };
+		A8308F8D27CCBD520071C31C /* Crawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8308F8C27CCBD520071C31C /* Crawler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		A8260DB327CA59F5003CBF33 /* KeyboardCrawler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KeyboardCrawler; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8260DB627CA59F5003CBF33 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A8308F8C27CCBD520071C31C /* Crawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crawler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				A8260DB627CA59F5003CBF33 /* main.swift */,
+				A8308F8C27CCBD520071C31C /* Crawler.swift */,
 			);
 			path = KeyboardCrawler;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8308F8D27CCBD520071C31C /* Crawler.swift in Sources */,
 				A8260DB727CA59F5003CBF33 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
